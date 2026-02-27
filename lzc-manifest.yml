@@ -23,6 +23,8 @@ services:
     environment:
       - MOLTIS_NO_TLS=true
       - MOLTIS_BEHIND_PROXY=true
+      - MOLTIS_CONFIG_DIR=/home/moltis/.config/moltis
+      - MOLTIS_DATA_DIR=/home/moltis/.moltis
       - MOLTIS_BIND=0.0.0.0
       - MOLTIS_WEBAUTHN_RP_ID=${LAZYCAT_APP_DOMAIN}
       - MOLTIS_WEBAUTHN_ORIGIN=https://${LAZYCAT_APP_DOMAIN}
@@ -34,6 +36,8 @@ services:
       - /lzcapp/var/config:/home/moltis/.config/moltis
       - /lzcapp/var/data:/home/moltis/.moltis
     setup_script: |
+      mkdir -p /home/moltis/.config/moltis
+      mkdir -p /home/moltis/.moltis
       chown -R moltis:moltis /home/moltis
 
 locales:
