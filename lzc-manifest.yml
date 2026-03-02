@@ -1,6 +1,6 @@
 name: Moltis
 package: community.lazycat.app.moltis
-version: 0.9.10
+version: 0.10.6
 min_os_version: 1.3.8
 description: "A personal AI gateway written in Rust"
 license: MIT
@@ -17,8 +17,8 @@ application:
 
 services:
   moltis:
-    # ghcr.io/moltis-org/moltis:0.9.10
-    image: registry.lazycat.cloud/czyt/moltis-org/moltis:a552672618290d41
+    # ghcr.io/moltis-org/moltis:0.10.6
+    image: registry.lazycat.cloud/czyt/moltis-org/moltis:039a63f3ae8491b9
     container_name: moltis
     environment:
       - MOLTIS_NO_TLS=true
