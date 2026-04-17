@@ -1,12 +1,3 @@
-name: Moltis
-package: community.lazycat.app.moltis
-version: 0.10.6
-min_os_version: 1.3.8
-description: "A personal AI gateway written in Rust"
-license: MIT
-homepage: https://github.com/moltis-org/moltis
-author: moltis-org
-
 application:
   subdomain: moltis
   public_path:
@@ -17,8 +8,8 @@ application:
 
 services:
   moltis:
-    # ghcr.io/moltis-org/moltis:0.10.6
-    image: registry.lazycat.cloud/czyt/moltis-org/moltis:039a63f3ae8491b9
+    # ghcr.io/moltis-org/moltis:20260417.01
+    image: registry.lazycat.cloud/czyt/moltis-org/moltis:84d5111ba53ace81
     container_name: moltis
     environment:
       - MOLTIS_NO_TLS=true
@@ -28,9 +19,7 @@ services:
       - MOLTIS_BIND=0.0.0.0
       - MOLTIS_WEBAUTHN_RP_ID=${LAZYCAT_APP_DOMAIN}
       - MOLTIS_WEBAUTHN_ORIGIN=https://${LAZYCAT_APP_DOMAIN}
-      # ubuntu:25.10
       - MOLTIS_TOOLS__EXEC__SANDBOX__IMAGE=registry.lazycat.cloud/czyt/library/ubuntu:8f90a5a3ae20b77f
-      # ghcr.io/browserless/chromium:v2.42.0
       - MOLTIS_TOOLS__BROWSER__SANDBOX_IMAGE=registry.lazycat.cloud/czyt/browserless/chromium:f62e87b57509333c
     binds:
       - /lzcapp/var/config:/home/moltis/.config/moltis
@@ -39,11 +28,3 @@ services:
       mkdir -p /home/moltis/.config/moltis
       mkdir -p /home/moltis/.moltis
       chown -R moltis:moltis /home/moltis
-
-locales:
-  en:
-    name: "Moltis"
-    description: "A Rust-native claw you can trust."
-  zh:
-    name: "Moltis"
-    description: "一款值得信赖的 Rust 原生 Claw"

@@ -1,0 +1,16 @@
+package: community.lazycat.app.moltis
+version: 0.10.7
+name: Moltis
+description: "A personal AI gateway written in Rust"
+min_os_version: 1.5.0
+license: MIT
+homepage: https://github.com/moltis-org/moltis
+author: moltis-org
+
+locales:
+  en:
+    name: "Moltis"
+    description: "A Rust-native claw you can trust."
+  zh:
+    name: "Moltis"
+    description: "一款值得信赖的 Rust 原生 Claw"
