@@ -10,7 +10,6 @@ services:
   moltis:
     # ghcr.io/moltis-org/moltis:20260417.01
     image: registry.lazycat.cloud/czyt/moltis-org/moltis:84d5111ba53ace81
-    container_name: moltis
     environment:
       - MOLTIS_NO_TLS=true
       - MOLTIS_BEHIND_PROXY=true
