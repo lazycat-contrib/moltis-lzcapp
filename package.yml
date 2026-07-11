@@ -1,12 +1,11 @@
 package: community.lazycat.app.moltis
-version: 0.10.7
+version: 20260603.1.0
 name: Moltis
 description: "A personal AI gateway written in Rust"
 min_os_version: 1.5.0
 license: MIT
 homepage: https://github.com/moltis-org/moltis
 author: moltis-org
-
 locales:
   en:
     name: "Moltis"
