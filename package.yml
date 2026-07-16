@@ -1,5 +1,5 @@
 package: community.lazycat.app.moltis
-version: 20260714.11.0
+version: 20260716.1.0
 name: Moltis
 description: "A personal AI gateway written in Rust"
 min_os_version: 1.5.0
