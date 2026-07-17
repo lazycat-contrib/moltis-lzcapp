@@ -8,8 +8,8 @@ application:
 services:
   moltis:
     # ghcr.io/moltis-org/moltis:20260417.01
-    # upstream: ghcr.io/moltis-org/moltis:20260716.01
-    image: registry.lazycat.cloud/czyt/moltis-org/moltis:55535d3295c8f342
+    # upstream: ghcr.io/moltis-org/moltis:20260717.03
+    image: registry.lazycat.cloud/czyt/moltis-org/moltis:8e3dee3a96de5213
     environment:
       - MOLTIS_NO_TLS=true
       - MOLTIS_BEHIND_PROXY=true
